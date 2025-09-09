@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salon Neige｜女性セラピストによるリラクゼーションサロン</title>
+  <meta name="description" content="神奈川県相模原市のSalon Neige（サロンネージュ）。女性セラピストによるオイルリンパマッサージ・もみほぐし。癒しの空間で心と体をケアいたします。">
+  <meta name="keywords" content="相模原, マッサージ, リラクゼーション, オイルリンパ, もみほぐし, 女性セラピスト, Salon Neige">
+  <link rel="canonical" href="https://yourgithubusername.github.io/salon-neige/">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#A8C0D6">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: linear-gradient(135deg, #f8fbff 0%, #e6f2ff 100%);
+      --fg: #2d2d2d;
+      --accent: #86a8c4;
+      --accent2: #b5cde6;
+      --card: rgba(255,255,255,0.95);
+      --line: #e1e5eb;
+      --shadow: 0 8px 32px rgba(134, 168, 196, 0.15);
+      --shadow-hover: 0 12px 40px rgba(134, 168, 196, 0.25);
+      --space: clamp(16px, 4vw, 28px);
+    }
+
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:"Noto Sans JP",system-ui;
+      line-height:1.7;
+      color:var(--fg);
+      background:var(--bg);
+      overflow-x:hidden;
+    }
+    img{max-width:100%;height:auto;display:block;}
+
+    header{
+      position:sticky;top:0;
+      background:rgba(255,255,255,0.9);
+      backdrop-filter:blur(10px);
+      z-index:100;
+      border-bottom:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+    nav{
+      display:flex;justify-content:space-between;align-items:center;
+      max-width:1200px;margin:0 auto;
+      padding:12px var(--space);
+    }
+    .logo {height:50px;width:auto;}
+    nav a{
+      margin-left:20px;text-decoration:none;
+      color:var(--fg);font-weight:500;
+      position:relative;
+      transition:0.3s;
+    }
+    nav a:hover{color:var(--accent);}
+    nav a::after{
+      content:'';position:absolute;left:0;bottom:-4px;
+      width:0;height:2px;background:var(--accent);
+      transition:0.3s;
+    }
+    nav a:hover::after{width:100%;}
+
+    .hero{
+      min-height:85vh;display:flex;align-items:center;justify-content:center;
+      text-align:center;position:relative;
+      background:linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.7)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+    }
+    .hero-overlay{
+      background:rgba(255,255,255,0.8);
+      padding:3rem 2rem;border-radius:20px;
+      box-shadow:var(--shadow);max-width:600px;
+    }
+    .hero h1{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(36px,6vw,64px);
+      margin:0 0 1rem;color:var(--accent);
+    }
+    .hero p{font-size:1.2rem;margin:0;color:#333;}
+
+    .section{
+      max-width:1200px;margin:0 auto;padding:80px var(--space);
+    }
+    h2{
+      font-size:2rem;font-weight:600;
+      color:var(--accent);text-align:center;
+      margin-bottom:2rem;
+      position:relative;
+    }
+    h2::after{
+      content:'';display:block;width:60px;height:3px;
+      background:linear-gradient(90deg,var(--accent),var(--accent2));
+      margin:1rem auto;border-radius:2px;
+    }
+    .card{
+      background:var(--card);
+      padding:clamp(20px,3vw,40px);
+      border:1px solid var(--line);
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      margin-bottom:var(--space);
+    }
+    .menu-grid{
+      display:grid;gap:var(--space);
+    }
+    @media(min-width:768px){
+      .menu-grid{grid-template-columns:repeat(2,1fr);}
+    }
+    .menu-item h3{color:var(--accent);margin-top:0;}
+    .menu-item table{width:100%;border-collapse:collapse;margin:1rem 0;}
+    .menu-item th,.menu-item td{padding:10px;border-bottom:1px solid var(--line);}
+    .menu-item th{background:rgba(134,168,196,0.05);}
+    .price{font-weight:700;color:var(--accent);}
+
+    .btn{
+      display:inline-block;margin:1rem;
+      padding:14px 32px;border-radius:30px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      color:#fff;text-decoration:none;
+      font-weight:600;box-shadow:var(--shadow);
+      transition:0.3s;
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-hover);}
+
+    .map iframe{
+      width:100%;height:400px;
+      border:0;border-radius:12px;box-shadow:var(--shadow);
+    }
+    footer{
+      text-align:center;padding:40px var(--space);
+      background:var(--card);font-size:0.9rem;color:#666;
+      border-top:1px solid var(--line);
+    }
+
+    @media (max-width:768px){
+      nav{flex-direction:column;gap:1rem;}
+      nav div{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;}
+      nav a{margin:0;}
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <img src="https://dummyimage.com/180x50/86a8c4/ffffff&text=Salon+Neige" alt="Salon Neige ロゴ" class="logo">
+      <div>
+        <a href="#concept">サロン紹介</a>
+        <a href="#menu">メニュー</a>
+        <a href="#reserve">予約</a>
+        <a href="#access">アクセス</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-overlay">
+        <h1>Salon Neige</h1>
+        <p>雪のように静かで優しい癒しの空間へ</p>
+      </div>
+    </section>
+
+    <!-- CONCEPT -->
+    <section id="concept" class="section">
+      <h2>サロン紹介</h2>
+      <div class="card">
+        <p>Salon Neigeは、女性セラピストによるオイルリンパマッサージ・ドレナージュ・もみほぐしを通じて、日々の疲れを癒す空間をご提供します。</p>
+        <p>静寂な空間で、心と体の疲れを優しく溶かし、本来の美しさと健康を取り戻すお手伝いをいたします。</p>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="section">
+      <h2>メニュー・料金</h2>
+      <div class="menu-grid">
+        <div class="card menu-item">
+          <h3>マッサージ（女性）</h3>
+          <table>
+            <tr><th>時間</th><th>料金（税込）</th></tr>
+            <tr><td>30分</td><td class="price">4,800円</td></tr>
+            <tr><td>60分</td><td class="price">6,800円</td></tr>
+            <tr><td>90分</td><td class="price">9,800円</td></tr>
+            <tr><td>120分</td><td class="price">12,800円</td></tr>
+          </table>
+        </div>
+        <div class="card menu-item">
+          <h3>マッサージ（男性）</h3>
+          <table>
+            <tr><th>時間</th><th>料金（税込）</th></tr>
+            <tr><td>30分</td><td class="price">5,800円</td></tr>
+            <tr><td>60分</td><td class="price">7,800円</td></tr>
+            <tr><td>90分</td><td class="price">10,500円</td></tr>
+            <tr><td>120分</td><td class="price">12,800円</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="card menu-item">
+        <h3>もみほぐし（男女共通）</h3>
+        <table>
+          <tr><th>時間</th><th>料金（税込）</th></tr>
+          <tr><td>30分</td><td class="price">3,500円</td></tr>
+          <tr><td>60分</td><td class="price">6,500円</td></tr>
+          <tr><td>90分</td><td class="price">9,000円</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- RESERVE -->
+    <section id="reserve" class="section">
+      <h2>ご予約・お問い合わせ</h2>
+      <div class="card center">
+        <p>ご予約はお電話またはWeb予約から承っております。</p>
+        <p style="font-size:1.3rem;margin:1rem 0;"><strong>📞 080-5463-9115</strong></p>
+        <a href="tel:08054639115" class="btn">電話予約</a>
+        <a href="https://example.com/reserve" class="btn">Web予約</a>
+      </div>
+    </section>
+
+    <!-- ACCESS -->
+    <section id="access" class="section">
+      <h2>アクセス</h2>
+      <div class="card">
+        <p><strong>住所：</strong> 神奈川県相模原市中央区鹿沼台2-22-44 コーポ榛名102</p>
+        <p><strong>電話番号：</strong> 080-5463-9115</p>
+        <p><strong>営業時間：</strong> 10:00-20:00（完全予約制）</p>
+      
+      </div>
+      <div class="map card">
+        <iframe src="https://www.google.com/maps?q=神奈川県相模原市中央区鹿沼台2-22-44&output=embed" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>&copy; <span id="year"></span> Salon Neige - 女性セラピストによるリラクゼーションサロン</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

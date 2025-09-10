@@ -68,7 +68,8 @@
     .hero{
       min-height:85vh;display:flex;align-items:center;justify-content:center;
       text-align:center;position:relative;
-      background:linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.7)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      background:linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.6)), 
+        url('https://images.unsplash.com/photo-1603398938378-e54eab7e6300?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
     }
     .hero-overlay{
       background:rgba(255,255,255,0.8);
@@ -111,10 +112,33 @@
       .menu-grid{grid-template-columns:repeat(2,1fr);}
     }
     .menu-item h3{color:var(--accent);margin-top:0;}
-    .menu-item table{width:100%;border-collapse:collapse;margin:1rem 0;}
-    .menu-item th,.menu-item td{padding:10px;border-bottom:1px solid var(--line);}
-    .menu-item th{background:rgba(134,168,196,0.05);}
-    .price{font-weight:700;color:var(--accent);}
+    .menu-item table{
+      width:100%;
+      border-collapse:collapse;
+      margin:1rem 0;
+      table-layout: fixed;
+    }
+    .menu-item th,
+    .menu-item td{
+      padding:12px;
+      border-bottom:1px solid var(--line);
+      text-align:center;
+    }
+    .menu-item th:first-child,
+    .menu-item td:first-child{
+      text-align:left;
+      width:50%;
+    }
+    .menu-item th:last-child,
+    .menu-item td:last-child{
+      text-align:right;
+      width:50%;
+    }
+    .price{
+      font-weight:700;
+      color:var(--accent);
+      font-size:1.1rem;
+    }
 
     .btn{
       display:inline-block;margin:1rem;
@@ -218,7 +242,7 @@
         <p>ご予約はお電話またはWeb予約から承っております。</p>
         <p style="font-size:1.3rem;margin:1rem 0;"><strong>📞 080-5463-9115</strong></p>
         <a href="tel:08054639115" class="btn">電話予約</a>
-        <a href="https://example.com/reserve" class="btn">Web予約</a>
+        <a href="https://calendar.app.google/P5Ao5HCGWZjLn9y56" target="_blank" class="btn">Web予約</a>
       </div>
     </section>
 
@@ -229,7 +253,6 @@
         <p><strong>住所：</strong> 神奈川県相模原市中央区鹿沼台2-22-44 コーポ榛名102</p>
         <p><strong>電話番号：</strong> 080-5463-9115</p>
         <p><strong>営業時間：</strong> 10:00-20:00（完全予約制）</p>
-      
       </div>
       <div class="map card">
         <iframe src="https://www.google.com/maps?q=神奈川県相模原市中央区鹿沼台2-22-44&output=embed" allowfullscreen="" loading="lazy"></iframe>
